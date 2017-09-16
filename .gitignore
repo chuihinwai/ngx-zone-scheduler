@@ -1,0 +1,10 @@
+dist/
+node_modules/
+.*
+!.babel*
+!.git*
+*.psd
+*.zip
+!.*rc
+!.*.json
+!.*.yaml
