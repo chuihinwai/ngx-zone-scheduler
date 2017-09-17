@@ -32,7 +32,7 @@
 		"radix": true,
 		"semicolon": true,
 		"space-before-function-paren": [ true, "never" ],
-		"space-within-parens": [ true, 1 ],
+		"space-within-parens": false,
 		"switch-default": true,
 		"switch-final-break": true,
 		"trailing-comma": [ true, "never" ],

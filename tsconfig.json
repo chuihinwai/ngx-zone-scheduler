@@ -5,7 +5,7 @@
 		"importHelpers": true,
 		"lib": [ "esnext", "dom" ],
 		"moduleResolution": "node",
-		"module": "esnext",
+		"module": "commonjs",
 		"rootDir": "src",
 		"outDir": "dist",
 		"sourceMap": true,
@@ -15,5 +15,10 @@
 	},
 	"include": [
 		"src/**/*.ts"
-	]
+	],
+	"angularCompilerOptions": {
+		"genDir": ".",
+		"entryModule": "src/zone-scheduler.module.ts#ZoneSchedulerModule",
+		"skipTemplateCodegen": true
+	}
 }

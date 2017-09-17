@@ -1,6 +1,6 @@
 {
 	"name": "ngx-zone-scheduler",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Zone scheduler for using Angular with rxjs",
 	"license": "MIT",
 	"author": "Jovalent Studios",
@@ -9,22 +9,18 @@
 		"url": "git+https://github.com/Jovalent/ngx-zone-scheduler.git"
 	},
 	"devDependencies": {
+		"@angular/compiler": "^4.4.1",
+		"@angular/compiler-cli": "^4.4.1",
 		"@angular/core": ">=4.0.0",
-		"awesome-typescript-loader": "^3.2.3",
-		"babel-core": "^6.26.0",
-		"babel-preset-env": "^1.6.0",
-		"del": "^3.0.0",
-		"gulp": "github:gulpjs/gulp#4.0",
-		"gulp-cli": "^1.4.0",
 		"husky": "^0.14.3",
 		"js-yaml": "^3.10.0",
+		"ngc-webpack": "^3.2.2",
+		"rimraf": "^2.6.2",
 		"rxjs": ">=5.0.0",
 		"tslib": "^1.7.1",
 		"tslint": "^5.7.0",
-		"tslint-loader": "^3.5.3",
 		"typescript": "^2.5.2",
-		"uglifyjs-webpack-plugin": "^1.0.0-beta.2",
-		"webpack": "^3.6.0"
+		"uglifyjs-webpack-plugin": "^1.0.0-beta.2"
 	},
 	"peerDependencies": {
 		"@angular/core": ">=4.0.0",
@@ -34,6 +30,9 @@
 	"module": "dist/index.js",
 	"typings": "dist/index.d.js",
 	"scripts": {
-		"prepare": "gulp"
+		"build": "ngc -p tsconfig.json",
+		"lint": "tslint -p tsconfig.json",
+		"prebuild": "rimraf dist",
+		"prepare": "npm run build"
 	}
 }
