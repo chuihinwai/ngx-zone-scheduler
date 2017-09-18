@@ -21,7 +21,7 @@ In `app.module.ts`:
 
 ```ts
 import { NgModule } from '@angular/core';
-import { ZoneSchedulerModule } from 'ngx-scheduler-module';
+import { ZoneSchedulerModule } from 'ngx-zone-scheduler';
 
 @NgModule( {
 	imports: [ ZoneSchedulerModule ]
@@ -36,7 +36,7 @@ In your services:
 import { Inject } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { IScheduler } from 'rxjs/Scheduler';
-import { ZoneScheduler } from 'ngx-scheduler-module';
+import { ZoneScheduler } from 'ngx-zone-scheduler';
 
 import 'rxjs/add/operator/observeOn';
 
