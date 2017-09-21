@@ -9,3 +9,4 @@ node_modules/
 !.*rc
 !.*.json
 !.*.yaml
+!.*.yml

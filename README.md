@@ -1,6 +1,5 @@
 # ngx-zone-scheduler #
-
-[![dependencies Status](https://david-dm.org/Jovalent/ngx-zone-scheduler/status.svg)](https://david-dm.org/Jovalent/ngx-zone-scheduler) [![devDependencies Status](https://david-dm.org/Jovalent/ngx-zone-scheduler/dev-status.svg)](https://david-dm.org/Jovalent/ngx-zone-scheduler?type=dev) [![peerDependencies Status](https://david-dm.org/Jovalent/ngx-zone-scheduler/peer-status.svg)](https://david-dm.org/Jovalent/ngx-zone-scheduler?type=peer)
+[![npm version](https://img.shields.io/npm/v/ngx-zone-scheduler.svg)](https://www.npmjs.com/package/ngx-zone-scheduler) [![npm downloads](https://img.shields.io/npm/dw/ngx-zone-scheduler.svg)](https://www.npmjs.com/package/ngx-zone-scheduler) [![Build Status](https://travis-ci.org/Jovalent/ngx-zone-scheduler.svg?branch=master)](https://travis-ci.org/Jovalent/ngx-zone-scheduler) [![dependencies Status](https://david-dm.org/Jovalent/ngx-zone-scheduler/status.svg)](https://david-dm.org/Jovalent/ngx-zone-scheduler) [![devDependencies Status](https://david-dm.org/Jovalent/ngx-zone-scheduler/dev-status.svg)](https://david-dm.org/Jovalent/ngx-zone-scheduler?type=dev) [![peerDependencies Status](https://david-dm.org/Jovalent/ngx-zone-scheduler/peer-status.svg)](https://david-dm.org/Jovalent/ngx-zone-scheduler?type=peer)
 
 
 An `IScheduler` implementation for use with [Angular](https://github.com/angular/angular) and [rxjs](https://github.com/ReactiveX/rxjs).
