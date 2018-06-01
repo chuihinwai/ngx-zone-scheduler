@@ -2,13 +2,13 @@
 [![npm version](https://img.shields.io/npm/v/ngx-zone-scheduler.svg)](https://www.npmjs.com/package/ngx-zone-scheduler) [![npm downloads](https://img.shields.io/npm/dw/ngx-zone-scheduler.svg)](https://www.npmjs.com/package/ngx-zone-scheduler) [![Build Status](https://travis-ci.org/Jovalent/ngx-zone-scheduler.svg?branch=master)](https://travis-ci.org/Jovalent/ngx-zone-scheduler) [![dependencies Status](https://david-dm.org/Jovalent/ngx-zone-scheduler/status.svg)](https://david-dm.org/Jovalent/ngx-zone-scheduler) [![devDependencies Status](https://david-dm.org/Jovalent/ngx-zone-scheduler/dev-status.svg)](https://david-dm.org/Jovalent/ngx-zone-scheduler?type=dev) [![peerDependencies Status](https://david-dm.org/Jovalent/ngx-zone-scheduler/peer-status.svg)](https://david-dm.org/Jovalent/ngx-zone-scheduler?type=peer)
 
 
-An `IScheduler` implementation for use with [Angular](https://github.com/angular/angular) and [rxjs](https://github.com/ReactiveX/rxjs).
+A `SchedulerLike` implementation for use with [Angular](https://github.com/angular/angular) and [rxjs](https://github.com/ReactiveX/rxjs).
 
 ## Purpose ##
 
 When an Angular component subscribes to an `Observable` data source, the callback will run outside of the Angular zone. If updates are made to the component within the callback, Angular may not detect the changes. This can lead to many strange problems that can be difficult to debug.
 
-This module provides an `IScheduler` implementation that will run your callbacks in the Angular zone so the changes will be detected. It can be injected into your services so your components don't need to worry about zones.
+This module provides a `SchedulerLike` implementation that will run your callbacks in the Angular zone so the changes will be detected. It can be injected into your services so your components don't need to worry about zones.
 
 This module should be fully [AoT](https://angular.io/guide/aot-compiler) compatible. It is extremely lightweight, as all of its runtime dependencies are [peerDependencies](https://nodejs.org/en/blog/npm/peer-dependencies/).
 
@@ -33,22 +33,20 @@ In your services:
 
 ```ts
 import { Inject } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { IScheduler } from 'rxjs/Scheduler';
+import { Observable, SchedulerLike } from 'rxjs';
+import { observeOn } from 'rxjs/operators';
 import { ZoneScheduler } from 'ngx-zone-scheduler';
-
-import 'rxjs/add/operator/observeOn';
 
 export class FooService {
 	public constructor(
 		@Inject( ZoneScheduler )
-		private readonly scheduler: IScheduler
+		private readonly scheduler: SchedulerLike
 	) {}
 
 	private data: Observable<{}>; // TODO: initialize data source
 
 	public foo() {
-		return this.data.observeOn( this.scheduler );
+		return this.data.pipe( observeOn( this.scheduler ) );
 	}
 }
 ```

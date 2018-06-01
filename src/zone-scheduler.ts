@@ -1,7 +1,7 @@
 import { NgZone } from '@angular/core';
 
-import { AsyncAction } from 'rxjs/scheduler/AsyncAction';
-import { AsyncScheduler } from 'rxjs/scheduler/AsyncScheduler';
+import { AsyncAction } from 'rxjs/internal/scheduler/AsyncAction';
+import { AsyncScheduler } from 'rxjs/internal/scheduler/AsyncScheduler';
 
 export class ZoneScheduler extends AsyncScheduler {
 	public constructor( public readonly ngZone: NgZone ) {

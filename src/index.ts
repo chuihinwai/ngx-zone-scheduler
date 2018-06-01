@@ -1,2 +1,2 @@
-export { ZoneScheduler } from './zone-scheduler';
-export { ZoneSchedulerModule } from './zone-scheduler.module';
+export * from './zone-scheduler';
+export * from './zone-scheduler.module';
