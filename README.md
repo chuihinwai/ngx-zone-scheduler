@@ -53,6 +53,6 @@ export class FooService {
 
 ## Alternative Usage ##
 
-You may also choose to inject `ZoneScheduler` directly into your components, and call `observeOn` from the consumer rather than the producer. This approach is less encapsulated, though, and has an increased surface area for maintenance and testing.
+You may also choose to inject `ZoneScheduler` directly into your components, and pipe to `observeOn` from the consumer rather than the producer. This approach is less encapsulated, though, and has an increased surface area for maintenance and testing.
 
 It's also possible to construct `ZoneScheduler` without `ZoneSchedulerModule`. You can simply pass an instance of `NgZone` to the `ZoneScheduler` constructor. `ZoneSchedulerModule` simply registers a provider for `ZoneScheduler` dependency injection.
