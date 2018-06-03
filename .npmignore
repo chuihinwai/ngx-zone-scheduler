@@ -1,3 +1,4 @@
+!dist/
 .*
 !.babel*
 !.npm*
@@ -6,3 +7,5 @@
 !.*rc
 !.*.json
 !.*.yaml
+!.*.yml
+*.log
