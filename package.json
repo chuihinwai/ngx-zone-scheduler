@@ -1,6 +1,6 @@
 {
 	"name": "ngx-zone-scheduler",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "Zone scheduler for using Angular with rxjs",
 	"license": "MIT",
 	"author": "Jovalent Studios",

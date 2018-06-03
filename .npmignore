@@ -1,8 +1,5 @@
-node_modules/
 .*
-.git/
 !.babel*
-!.git*
 !.npm*
 *.psd
 *.zip
