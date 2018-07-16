@@ -1,0 +1,54 @@
+rules:
+  array-type:
+  - true
+  - array-simple
+  arrow-return-shorthand: true
+  class-name: true
+  curly:
+  - true
+  - ignore-same-line
+  encoding: true
+  eofline: true
+  indent:
+  - true
+  - tabs
+  no-arg: true
+  no-console: true
+  no-debugger: true
+  no-default-export: true
+  no-duplicate-imports: true
+  no-duplicate-super: true
+  no-eval: true
+  no-invalid-template-strings: true
+  no-invalid-this: true
+  no-irregular-whitespace: true
+  no-trailing-whitespace: true
+  no-string-literal: true
+  no-string-throw: true
+  no-switch-case-fall-through: true
+  no-unsafe-finally: true
+  no-unused-expression: true
+  no-var-keyword: true
+  object-literal-shorthand: true
+  prefer-const: true
+  prefer-object-spread: true
+  prefer-template: true
+  quotemark:
+  - true
+  - single
+  radix: true
+  semicolon: true
+  space-before-function-paren:
+  - true
+  - never
+  space-within-parens: false
+  switch-default: true
+  switch-final-break: true
+  trailing-comma:
+  - true
+  - never
+  triple-equals:
+	- true
+	- allow-null-check
+  typeof-compare: true
+  use-isnan: true
