@@ -81,6 +81,7 @@ export class ZoneScheduler implements SchedulerLike {
 			} catch( e ) {
 				error = e;
 			}
+			if( error ) break;
 		} while( ++index < count && ( action = actions.shift() ) );
 		if( error ) {
 			while( ++index < count && ( action = actions.shift() ) ) {

@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
 		"allowSyntheticDefaultImports": true,
+		"baseUrl": ".",
 		"declaration": true,
 		"importHelpers": true,
 		"lib": [ "esnext", "dom" ],
@@ -18,7 +19,7 @@
 	],
 	"angularCompilerOptions": {
 		"genDir": ".",
-		"entryModule": "src/zone-scheduler.module.ts#ZoneSchedulerModule",
+		"entryModule": "src/zone-scheduler.module#ZoneSchedulerModule",
 		"skipTemplateCodegen": true
 	}
 }
